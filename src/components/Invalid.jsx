@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FaTimesCircle } from 'react-icons/fa';
-import './Invalid.css'; // Import the CSS file
+import { FaCheckCircle } from 'react-icons/fa'; // Change icon to check circle for valid
+import './Invalid.css'; // Import the same CSS file
 
-const Invalid = () => {
+const Valid = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,13 +20,13 @@ const Invalid = () => {
       ) : (
         <>
           <div className="icon-animation">
-            <FaTimesCircle className="invalid-icon" />
+            <FaCheckCircle className="invalid-icon" /> {/* Change to valid icon */}
           </div>
-          <h2 className="invalid-text">Document Not Verified</h2>
+          <h2 className="invalid-text">Document Verified</h2> {/* Change message */}
         </>
       )}
     </div>
   );
 };
 
-export default Invalid;
+export default Valid;
